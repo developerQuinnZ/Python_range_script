@@ -13,5 +13,5 @@ for root, dirs,files in os.walk('C:\\A\\'):
         st = os.stat(path)    
         mtime = dt.datetime.fromtimestamp(st.st_mtime)
         if mtime > ago:
-            shutil.move(path,dst)
+            shutil.copy(path,dst)
             print('%s modified %s'%(path, mtime))
